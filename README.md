@@ -94,9 +94,9 @@ Esta propiedad engloba todas las medidas espaciales que definen el volumen del e
 <!-- TOC --><a name="tipo-de-espacio"></a>
 #### Tipo de espacio:
 Esta propiedad hace referencia a el proposito previsto para el espacio. Un ejemplo es un espacio que se construyo con el proposito de ser habitable, en dicho caso su [tipo](#tipo-de-espacio-1) sería "Apartamento".
-#### Valor base
+#### Valor base:
 Este valor hace referencia a la representación cuantivativa en moneda local del valor intrinseco del espacio físico dentro de un periodo de tiempo.
-#### Valorización
+#### Valorización:
 Es la representación cuantitativa en moneda del valor añadido o sustraido que tiene el espacio físico debido a condiciones del mercado para un periodo de tiempo.
 <!-- TOC --><a name="transacciones-1"></a>
 ### Transacciones
@@ -112,10 +112,10 @@ Como se mencionó anteriormente, el tipo de espacio hace referencia al uso previ
 <!-- TOC --><a name="transacciones-2"></a>
 ### Propiedades
 Cada tipo de espacio tiene las siguientes propiedades relevantes para el negocio
-#### Margen de ganancia
+#### Margen de ganancia:
 El margen de ganancia para un tipo de espacio es el valor en moneda local que se espera recibir por encima del [valor base](#) más la [valorización](#) del espacio fisico. Esto implica que se espera que el margen de ganancia no sea menor a cero.
 ### Transacciones
-Sobre cada tipo de espacio se pueden hacer las siguientes transacciones
+Sobre cada tipo de espacio se pueden hacer las siguientes transacciones.
 <!-- TOC --><a name="asignacion-de-margen-de-ganancia"></a>
 #### Asignacion de margen de ganancia
 Este proceso hace referencia a la asignación de un [margen de ganancia](#) que entra en rigor desde la fecha en la que se hace la asignación hasta la siguiente fecha de asignación más cercana o hasta la fecha presente en su defecto.
@@ -124,15 +124,20 @@ Este proceso hace referencia a la asignación de un [margen de ganancia](#) que 
 Un complemento es un objeto o conjuntos de objetos que pueden instalarse físicamente en un o unos determinados [tipos de espacio](#tipo-de-espacio-1) para complementar el uso previsto del espacio.
 ### Propiedades
 Cada Complemento tiene una serie de propiedades relevantes para el negocio.
-#### Tipo de complemento
-El tipo de complemento hace referencia a la función que ofrece el complemento al espacio en el que se aplica.
+#### Tipo de complemento:
+El tipo de complemento hace referencia a la labor que desempeña  el complemento en el espacio en el que se aplica.
 ## Tipo de complemento
-Como se mencionó anteriormente, un tipo de complemento se entiende como la funcionalidad que ofrece el complemento en el momento en el que se instala en cualquier espacio físico.
+Como se mencionó anteriormente, un tipo de complemento se entiende como la labor que desempeña el complemento al instalarse a en cualquier espacio físico.
 ### Propiedades
-Cada tipo de espacio tiene las siguientes propiedades relevantes para el negocio.
-#### Nombre
+Cada tipo de complemento tiene las siguientes propiedades relevantes para el negocio.
+#### Nombre:
 Es el nombre descriptivo del tipo de complemento, y que se utiliza para diferenciarlo de cualquier otro tipo de complemento.
-
+#### Descripción:
+Es una descripcción detallada del procedimiento de instalación y de los elementos instalados en el tipo de complemento.
+#### Categoria:
+Es la clasificación dentro de la que entra el tipo de complemento según la labor que desempeña. La categoría puede ser la misma para varios tipos de elementos. Un ejemplo es la categoría "Kit de acabado" que engloba tanto los tipos de complemento "Kit de acabado de suelo" como "Kit de cocina closet".
+#### Lista de procedimientos:
+Cada tipo de complemento tiene una lista de procedimientos en orden consecutivo que se realizan durante la instalación del complemento. Esta lista ayuda a saber que tipos de complementos coinciden en algún o algunos procedimientos. Un ejemplo hipotético serían dos tipos de complementos que tengan dentro de su lista el procedimiento de "instalación de suelo". Cada procedimeinto de la lista tiene un ordén dentro de la ejecución y una duración en tiempo.
 <!-- TOC --><a name="transacciones-3"></a>
 ### Transacciones
 Sobre cada tipo de complemento se pueden realizar las siguientes transacciones relevantes para el negocio.
@@ -144,3 +149,5 @@ Liberar un tipo de complemento para un [tipo de espacio](#tipo-de-espacio-1) con
 #### Retiro para tipo de espacio
 Retirar un tipo de complemento para un tipo de espacio consiste en la indicaicón de que el tipo de complemento ya no puede instalarse físicamente en dicho tipo de espacio. Para poder realizar un retiro deben cumplirse las siguientes reglas:
 1. Entre la fecha de retiro de un determinado tipo de complemento para un determinado tipo de espacio y la fecha de retiro anterior más cercana del mismo tipo de complemento para el mismo tipo de espacio debe existir una fecha de liberación del dicho tipo de complemento para el mismo tipo de espacio. En otras palabras, no puede retirarse un tipo de complemento para un tipo de espacio si previamente se hizo exactamente el mismo retiro y sigue activo.
+#### Inserción de procedimiento
+Es la inserción de un procedimiento dentro la lista de procedimientos del tipo de complemento 
