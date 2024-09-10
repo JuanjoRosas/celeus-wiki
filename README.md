@@ -29,7 +29,7 @@
          - [Margen de ganancia:](#margen-de-ganancia)
       + [Transacciones](#transacciones-2)
          - [Asignacion de margen de ganancia](#asignacion-de-margen-de-ganancia)
-   * [Complementos](#complementos)
+   * [Complemento](#complemento)
       + [Propiedades](#propiedades-4)
          - [Tipo de complemento:](#tipo-de-complemento)
    * [Tipo de complemento](#tipo-de-complemento-1)
@@ -37,6 +37,7 @@
          - [Nombre:](#nombre-1)
          - [Descripción:](#descripción)
          - [Categoria:](#categoria)
+         - [Lista de tipos de espacio:](#lista-de-tipos-de-espacio)
          - [Lista de procedimientos:](#lista-de-procedimientos)
       + [Transacciones](#transacciones-3)
          - [Liberación para tipo de espacio](#liberación-para-tipo-de-espacio)
@@ -67,7 +68,7 @@ Cada proyecto tiene un nombre por el cual se puede referir a él.
 Es la lista de [espacios físicos](#espacio-físico) que contiene el proyecto de construcción.
 <!-- TOC --><a name="espacio-físico"></a>
 ## Espacio físico
-Se entiende como espacio físico a volúmenes espaciales continuos cuyas fronteras se determinan con posiciones relativas a otra posición de referencia que hace parte del proyecto de construcción al cual pertenece el espacio.
+Se entiende como espacio físico a volúmenes espaciales continuos cuyas fronteras se determinan con posiciones relativas a otra posición de referencia que hace parte del [proyecto de construcción](#proyecto-de-construcción) al cual pertenece el espacio.
 <!-- TOC --><a name="subcategorias"></a>
 ### Subcategorias
 Un espacio físico se puede clasificar de dos formas distintas:
@@ -121,10 +122,10 @@ Es la representación cuantitativa en moneda del valor añadido o sustraido que 
 Sobre cada espacio se pueden hacer las siguientes transacciones
 <!-- TOC --><a name="asignación-de-precio-base"></a>
 #### Asignación de precio base
-Este proceso hace referencia a la asignación de un [valor base](#) que entra en rigor desde la fecha en la que se hace la asignación hasta la siguiente fecha de asignación más cercana o en su defecto hasta la fecha presente.
+Este proceso hace referencia a la asignación de un [valor base](#valor-base) que entra en rigor desde la fecha en la que se hace la asignación hasta la siguiente fecha de asignación más cercana o en su defecto hasta la fecha presente.
 <!-- TOC --><a name="asignación-de-valorización"></a>
 #### Asignación de valorización
-Este proceso hace referencia a la asignación de una [valorización](#) que entra en rigor desde la fecha en la que se hace la asignación hasta la siguiente fecha de asignación más cercana o en su defecto hasta la fecha presente.
+Este proceso hace referencia a la asignación de una [valorización](#valorización) que entra en rigor desde la fecha en la que se hace la asignación hasta la siguiente fecha de asignación más cercana o en su defecto hasta la fecha presente.
 <!-- TOC --><a name="tipo-de-espacio-1"></a>
 ## Tipo de espacio
 Como se mencionó anteriormente, el tipo de espacio hace referencia al uso previsto que se pensó para el espacio.
@@ -133,22 +134,22 @@ Como se mencionó anteriormente, el tipo de espacio hace referencia al uso previ
 Cada tipo de espacio tiene las siguientes propiedades relevantes para el negocio
 <!-- TOC --><a name="margen-de-ganancia"></a>
 #### Margen de ganancia:
-El margen de ganancia para un tipo de espacio es el valor en moneda local que se espera recibir por encima del [valor base](#) más la [valorización](#) del espacio fisico. Esto implica que se espera que el margen de ganancia no sea menor a cero.
+El margen de ganancia para un tipo de espacio es el valor en moneda local que se espera recibir por encima del [valor base](#valor-base) más la [valorización](#valorización) del espacio fisico. Esto implica que se espera que el margen de ganancia no sea menor a cero.
 <!-- TOC --><a name="transacciones-2"></a>
 ### Transacciones
 Sobre cada tipo de espacio se pueden hacer las siguientes transacciones.
 <!-- TOC --><a name="asignacion-de-margen-de-ganancia"></a>
 #### Asignacion de margen de ganancia
-Este proceso hace referencia a la asignación de un [margen de ganancia](#) que entra en rigor desde la fecha en la que se hace la asignación hasta la siguiente fecha de asignación más cercana o hasta la fecha presente en su defecto.
-<!-- TOC --><a name="complementos"></a>
-## Complementos
+Este proceso hace referencia a la asignación de un [margen de ganancia](#margen-de-ganancia) que entra en rigor desde la fecha en la que se hace la asignación hasta la siguiente fecha de asignación más cercana o hasta la fecha presente en su defecto.
+<!-- TOC --><a name="complemento"></a>
+## Complemento
 Un complemento es un objeto o conjuntos de objetos que pueden instalarse físicamente en un o unos determinados [tipos de espacio](#tipo-de-espacio-1) para complementar el uso previsto del espacio.
 <!-- TOC --><a name="propiedades-4"></a>
 ### Propiedades
 Cada Complemento tiene una serie de propiedades relevantes para el negocio.
 <!-- TOC --><a name="tipo-de-complemento"></a>
 #### Tipo de complemento:
-El tipo de complemento hace referencia a la labor que desempeña  el complemento en el espacio en el que se aplica.
+El tipo de complemento hace referencia a la labor que desempeña  el complemento en el espacio en el que se instala.
 <!-- TOC --><a name="tipo-de-complemento-1"></a>
 ## Tipo de complemento
 Como se mencionó anteriormente, un tipo de complemento se entiende como la labor que desempeña el complemento al instalarse a en cualquier espacio físico.
@@ -164,23 +165,26 @@ Es una descripcción detallada del procedimiento de instalación y de los elemen
 <!-- TOC --><a name="categoria"></a>
 #### Categoria:
 Es la clasificación dentro de la que entra el tipo de complemento según la labor que desempeña. La categoría puede ser la misma para varios tipos de elementos. Un ejemplo es la categoría "Kit de acabado" que engloba tanto los tipos de complemento "Kit de acabado de suelo" como "Kit de cocina closet".
+<!-- TOC --><a name="lista-de-tipos-de-espacio"></a>
+#### Lista de tipos de espacio:
+Es la lista de los [tipos de espacio](#tipo-de-espacio-1) al los cuales se les puede instalar el tipo de complemento.
 <!-- TOC --><a name="lista-de-procedimientos"></a>
 #### Lista de procedimientos:
-Cada tipo de complemento tiene una lista de procedimientos en orden consecutivo que se realizan durante la instalación del complemento. Esta lista ayuda a saber que tipos de complementos coinciden en algún o algunos procedimientos. Un ejemplo hipotético serían dos tipos de complementos que tengan dentro de su lista el procedimiento de "instalación de suelo". Cada procedimeinto de la lista tiene un ordén dentro de la ejecución y una duración en tiempo.
+Cada tipo de complemento tiene una lista de [procedimientos](#procedimiento) en orden consecutivo que se realizan durante la instalación del complemento. Esta lista ayuda a saber que tipos de complementos coinciden en algún o algunos procedimientos. Un ejemplo hipotético serían dos tipos de complementos que tengan dentro de su lista el procedimiento de "instalación de suelo". Cada procedimiento de la lista tiene un ordén de ejecución y una duración en tiempo.
 <!-- TOC --><a name="transacciones-3"></a>
 ### Transacciones
 Sobre cada tipo de complemento se pueden realizar las siguientes transacciones relevantes para el negocio.
 <!-- TOC --><a name="liberación-para-tipo-de-espacio"></a>
 #### Liberación para tipo de espacio
-Liberar un tipo de complemento para un [tipo de espacio](#tipo-de-espacio-1) consiste en la indicación de que el tipo de complemento puede instalarse físicamente en dicho tipo de espacio. Para poder realizar una liberación deben cumplirse las siguientes reglas:
+Liberar un tipo de complemento para un [tipo de espacio](#tipo-de-espacio-1) consiste en la agregación de dicho tipo de espacio a la [lista de tipos de espacio](#lista-de-tipos-de-espacio) del complemento. Para poder realizar una liberación deben cumplirse las siguientes reglas:
 1. Entre la fecha de liberación de un determinado tipo de complemento para un determinado tipo de espacio y la fecha de liberación anterior más cercana del mismo tipo de complemento para el mismo tipo de espacio debe existir una fecha de retiro de dicho tipo de complemento para el mismo tipo de espacio. En otras palabras, no puede liberarse un tipo de complemento para un tipo de espacio si previamente se hizo exactamente la misma liberación y sigue activa.
 <!-- TOC --><a name="retiro-para-tipo-de-espacio"></a>
 #### Retiro para tipo de espacio
-Retirar un tipo de complemento para un tipo de espacio consiste en la indicaicón de que el tipo de complemento ya no puede instalarse físicamente en dicho tipo de espacio. Para poder realizar un retiro deben cumplirse las siguientes reglas:
+Retirar un tipo de complemento para un tipo de espacio consiste en la eliminación del tipo de espacio de la [lista de tipos de espacio](#lista-de-tipos-de-espacio) del tipo de complemento. Para poder realizar un retiro deben cumplirse las siguientes reglas:
 1. Entre la fecha de retiro de un determinado tipo de complemento para un determinado tipo de espacio y la fecha de retiro anterior más cercana del mismo tipo de complemento para el mismo tipo de espacio debe existir una fecha de liberación del dicho tipo de complemento para el mismo tipo de espacio. En otras palabras, no puede retirarse un tipo de complemento para un tipo de espacio si previamente se hizo exactamente el mismo retiro y sigue activo.
 <!-- TOC --><a name="inserción-de-procedimiento"></a>
 #### Inserción de procedimiento
-Es la inserción de un procedimiento dentro la lista de procedimientos del tipo de complemento. La inserción debe tener tanto el procedimien como la fecha en la que se inserta, la duración del procedimiento y la posición consecutiva en la que se inserta. Para poder realizar una inserción de un procedimiento dentro de la lista deben cumplirse las siguientes reglas:
+Es la inserción de un [procedimiento](#procedimiento) dentro la [lista de procedimientos](#lista-de-procedimientos) del tipo de complemento. La inserción debe tener tanto el procedimien como la fecha en la que se inserta, la duración del procedimiento y la posición consecutiva en la que se inserta. Para poder realizar una inserción de un procedimiento dentro de la lista deben cumplirse las siguientes reglas:
 1. Entre la fecha de inserción de un determinado procedimiento en una determinada posición dentro de una lista y la fecha de inserción anterior más cercana del mismo procedimiento a la misma lista y en la misma posición debe existir una fecha de remoción de dicho procedimiento de la misma lista y en la misma posición. En otras palabras, no se puede insertar un procedimiento a una lista en una posición si este ya fue agregado en la misma posición y sigue presente en la lista.
 <!-- TOC --><a name="remoción-de-procedimiento"></a>
 #### Remoción de procedimiento
@@ -189,10 +193,10 @@ Es la eliminación de un procedimiento de la lista de procedimientos del tipo de
 
 <!-- TOC --><a name="procedimiento"></a>
 ## Procedimiento
-Se entiende como procedimiento a una tarea que se lleva a cabo durante la instalación de un complemento.
+Se entiende como procedimiento a una tarea que se lleva a cabo durante la instalación de un [complemento](#complemento).
 <!-- TOC --><a name="propiedades-6"></a>
 ### Propiedades
 Cada procedimiento tiene una serie de propiedades relevantes para el negocio.
 <!-- TOC --><a name="nombre-2"></a>
 #### Nombre:
-Es el nombre que describe al procedimiento y que lo ayuda a diferenciarse de cualquier otro procedimiento.
+Es el nombre que describe al procedimiento y que lo sirve para diferenciarlo de cualquier otro procedimiento.
